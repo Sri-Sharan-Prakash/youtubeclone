@@ -27,18 +27,8 @@ A full-featured YouTube clone built with **React.js** and **Redux** that allows 
 
 ---
 
-## 📂 Folder Structure
+## 📂 Installation
 
-youtube-clone/
-├── public/
-├── src/
-│ ├── api/ # API config & requests
-│ ├── components/ # Reusable components
-│ ├── pages/ # Page-level components (Home, Watch, Search)
-│ ├── redux/ # Redux slices and store config
-│ ├── utils/ # Utility functions
-│ ├── App.jsx
-│ └── main.jsx
-├── .env
-├── package.json
-└── README.md
+- Clone this repo
+- use npm i or npm install
+- npm run dev
