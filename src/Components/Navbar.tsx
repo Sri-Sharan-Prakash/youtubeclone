@@ -24,7 +24,6 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
         </div>
       </div>
 
-      {/* Center */}
       <div className="hidden sm:flex items-center w-full max-w-xl">
         <input
           type="text"
