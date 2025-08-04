@@ -18,7 +18,7 @@ import {
   MdPlaylistPlay,
 } from "react-icons/md";
 import { SiYoutubeshorts } from "react-icons/si";
-import { FaHistory } from "react-icons/fa";
+import { FaHistory, FaUserCircle } from "react-icons/fa";
 import { SidebarSection } from "./SidebarSection";
 import { FiThumbsUp } from "react-icons/fi";
 import { useLocation } from "react-router-dom";
@@ -67,7 +67,7 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
       className={`fixed top-[56px] left-0 h-[calc(100vh-56px)] bg-white px-4 py-3 shadow-sm transition-all duration-300 z-40
         ${isOpen ? "w-60 sidebar-scroll overflow-y-hidden hover:overflow-y-auto" : "w-0 overflow-hidden"}`}
     >
-      {isOpen && (
+      {isOpen ? (
         <>
           <SidebarSection title="" items={mainMenu} activePath={location.pathname} />
           <hr className="my-3" />
@@ -82,6 +82,25 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
             <p className="mt-1">Built with ❤️ using React</p>
           </div>
         </>
+      ) : (
+        <div className="flex flex-col items-center w-16 h-full bg-white shadow-lg rounded-xl mt-4 py-6 gap-8">
+          <button className="flex flex-col items-center text-gray-700 hover:text-blue-600">
+            <MdHome size={28} />
+            <span className="text-xs mt-1">Home</span>
+          </button>
+          <button className="flex flex-col items-center text-gray-700 hover:text-blue-600">
+            <SiYoutubeshorts size={28} />
+            <span className="text-xs mt-1">Shorts</span>
+          </button>
+          <button className="flex flex-col items-center text-gray-700 hover:text-blue-600">
+            <MdSubscriptions size={28} />
+            <span className="text-xs mt-1">Subs</span>
+          </button>
+          <button className="flex flex-col items-center text-gray-700 hover:text-blue-600">
+            <FaUserCircle size={28} />
+            <span className="text-xs mt-1">Account</span>
+          </button>
+        </div>
       )}
     </aside>
   );
