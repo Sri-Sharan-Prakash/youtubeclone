@@ -17,7 +17,6 @@ function App() {
     <div className="bg-gray-50 min-h-screen">
       <Navbar toggleSidebar={toggleSidebar} />
       <div className="flex">
-        {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} />
         {/* Vertical widget bar when sidebar is closed */}
         {!isSidebarOpen && (
@@ -46,7 +45,7 @@ function App() {
             isSidebarOpen ? "sm:ml-60" : "ml-16"
           }`}
         >
-          <Outlet />
+          <Outlet context={{ isSidebarOpen }} />
         </main>
       </div>
     </div>
