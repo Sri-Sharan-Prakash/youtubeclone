@@ -42,7 +42,7 @@ const Video = () => {
 
   useEffect(() => {
     if (!id) return;
-    const apiKey = 'AIzaSyCF0IUhYNS2K9_ZnnXpz6pVRXMTFuqUhhY';
+    const apiKey = '';
     axios
       .get(
         `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${id}&key=${apiKey}`
