@@ -10,7 +10,7 @@ const Feed = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiKey = "AIzaSyCF0IUhYNS2K9_ZnnXpz6pVRXMTFuqUhhY";
+    const apiKey = "";
     axios
       .get(
         `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=0&key=${apiKey}`
